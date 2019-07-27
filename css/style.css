@@ -1,0 +1,141 @@
+.title{
+  color:blue;
+  font size: 20px;
+}
+.container{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  border: 1px solid black;
+}
+.image{
+  display: block;
+  width: 200px;
+}
+.overlay{
+  position: absolute;
+  transition: all .3s ease;
+  opacity: 0;
+  background-color: red;
+}
+.container:hover .overlay{
+  opacity: 1;
+}
+.text{
+  color: #fff;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  font-size: 20px;
+}
+.overlayleft{
+  width: 0;
+  height: 100%;
+  top:0;
+  left: 0;
+  background-color: blue;
+}
+.overlayright{
+  width: 0;
+  height: 100%;
+  top:0;
+  right: 0;
+  background-color: violet;
+}
+.overlaytop{
+  width: 100%;
+  height: 0;
+  top:0;
+  left: 0;
+  background-color: pink;
+}
+.overlayfade{
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  background-color: greenyellow;
+}
+.overlaybottom{
+  width: 100%;
+  height: 0;
+  bottom:0;
+  left: 0;
+  background-color: aqua;
+}
+.overlaycross{
+  width: 0;
+  height: 0;
+  top:0;
+  bottom: 0;
+  background-color: purple;
+}
+.container:hover .overlayleft, .container:hover .overlayright{
+  width: 100%;
+}
+.container:hover .overlaytop, .container:hover .overlaybottom{
+  height: 100%;
+}
+.container:hover .overlaycross, .container:hover .overlaycross{
+  width: 100%;
+  height: 100%;
+}
+.banner{
+  background-image: url(../images/green.jpg);
+  background-size: cover;
+  text-align: center;
+  padding: 212px 0;
+  position: relative;
+}
+.banner:after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  opacity: 1;
+  z-index: 0;
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+}
+.banner-content{
+  position: relative;
+  color: white;
+  z-index: 10;
+}
+.banner2{
+  background-image: url(../images/blue.jpg);
+  background-size: cover;
+  text-align: center;
+  width: 50%;
+  margin: 10px auto;
+  padding: 160px 0;
+  position: relative;
+}
+.banner2:after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  opacity: .5;
+  z-index: 0;
+  position: absolute;
+}
+.banner-content2{
+  position: relative;
+  opacity: 0;
+  z-index: 1;
+}
+.banner2:hover:after{
+   background-image: linear-gradient(to right,   #FF4500, #FFFF00);
+   width: 100%;
+}
+.banner2:hover .banner-content2{
+  opacity: 3;
+}
+
